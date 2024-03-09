@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+<nav class ="navbar">
+    <span class="logo"><span style="color: rgb(42, 15, 122); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >A.</span>Nafea</span>
+    <ul id="sidemenu">
+    <li> <a href="#Home">home</a> </li> 
+    <li> <a href="#about">About</a></li> 
+    <li> <a href="#Portfolio">Portfolio</a></li> 
+    <li> <a href="#contact">contacts</a></li>
+    <i class="fa-solid fa-xmark" onclick="closemenu()"></i> 
+</ul>
+<i class="fa-solid fa-bars" onclick="openmenu()"></i>
+</nav>
+<div class="header-text">
+    <p>Hi,I’m <span style="color:rgb(42, 15, 122); ;">Ahmed</span> Nafea from Egypt</p>
+    <h1>Computer Engineer/Web developer</h1>
+</div>
+</div>
+    </header>
+    <!-- About section -->
+    <div id="about">
+        <div class="row">
+            <div class ="about-col1">
+                <img src="Images/pic1_edited-removebg-preview.png">
+            </div>
+            <div class ="about-col2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Computer and Communication Sophomore student at Cairo University.
+                    USAID Scholar and was among top 50 on Egypt at high school.
+                    taking courses at Entrepreunurship and leadership with USAID.
+                    Front-end web developer.
+                  </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Activities</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web development</span><br>Front-end developer</li>
+                            <li><span>C/C++</span><br>Object-oriented programming</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>High school graduate </li>
+                            <li><span>2027</span><br>Communication Engineer graduate</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023</span><br>PR Member at GDSC</li>
+                            <li><span>2023</span><br>PR Member at MLSC</li>
+                            <li><span>2024</span><br>Computer Member at IEEE</li>
+
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- about section end 
+    start of Portfolio -->
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/My website.png">
+                    <div class="layer">
+                        <h3>Environmental awareness website</h3>
+                        <p>This website shares awareness among people about 
+                            Climate change problem.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+<h1 class="subtitle">Contact Me</h1>
+<p>
+<i class="fa-solid fa-envelope"></i>ahmedyehya180@gmail.com
+</p>
+<p><i class="fa-solid fa-phone"></i>01207871173</p>
+<div class="social-icons">
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+</div>
+<a href="Images/My_CV.pdf" download class="btn" target="_blank">Download CV</a>
+                </div>
+                    <div class="conatact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+
+                    </div>
+            </div>
+    </div>
+    <div class="copyright">
+        <p>Made by Ahmed Nafea ||<span style="color: #6c05bbf5;"> All rights reserved </span></p>
+    </div>
+</div>
+
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px"; 
+}
+    </script>
+</body>
+</html>
